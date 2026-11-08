@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!--
+    GitHub Pages can't send headers, so the policy rides in a meta tag.
+    'wasm-unsafe-eval': skiko and sqlite-wasm compile WebAssembly.
+    connect-src: Firebase Auth/Firestore/Storage (*.googleapis.com) and the
+    TURN-credentials function; WebRTC itself isn't governed by CSP.
+    style-src 'unsafe-inline': the inline <style> below and the style
+    attributes Compose sets on its canvas and text-input helpers.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; connect-src 'self' https://*.googleapis.com https://us-central1-p2p2-98e81.cloudfunctions.net; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Envoy</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #f5f6fa; overflow: hidden; }
+    #ComposeTarget { width: 100vw; height: 100vh; display: block; outline: none; }
+    #boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+            font: 16px -apple-system, system-ui, sans-serif; color: #5b6472; text-align: center; padding: 24px; }
+    #boot.error { color: #b3261e; }
+  </style>
+</head>
+<body>
+  <div id="boot">Starting Envoy…</div>
+  <canvas id="ComposeTarget" tabindex="0"></canvas>
+  <script src="version.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="skiko.js"></script>
+  <script src="envoy.js?v=dev-5c3fa80"></script>
+</body>
+</html>

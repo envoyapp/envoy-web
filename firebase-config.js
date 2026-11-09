@@ -10,3 +10,8 @@ window.ENVOY_FIREBASE_CONFIG = {
   messagingSenderId: "970059577103",
   appId: "1:970059577103:web:85168b6692244c8d38b07a",
 };
+
+// Web Push (VAPID) public key: Firebase console -> Project settings ->
+// Cloud Messaging -> Web Push certificates. Public too. Empty means this
+// build offers no notifications (Settings hides the section).
+window.ENVOY_VAPID_KEY = "BBNNw77_eUBE2zdCQaUwpm02dtH0D-y9QhW2BLRqDJ5HIWMn5ilE-90MNqTktJSVobhOhlMbC8uOYFUuNJJcARk";

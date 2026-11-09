@@ -1,1 +1,1 @@
-window.ENVOY_VERSION = "0.1.40";
+window.ENVOY_VERSION = "0.1.41";
